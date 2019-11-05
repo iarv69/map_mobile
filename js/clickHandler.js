@@ -1,5 +1,5 @@
 
-      	//var popup = new L.popup();
+      	var popup = new L.popup();
        	var mark=new L.marker();
        	var ltalg;//=new L.latLng();
        	var cir=new L.circle();
@@ -28,7 +28,7 @@ function onMapClick(e) {
 		
 		mark.setIcon(greenIcon);
 		mark.setLatLng([e.latlng.lat.toString(), e.latlng.lng.toString()]);
-		mark.addTo(map);
+		mark.addTo(map).bindPopup("This is my location.");
 		//L.circle([38,24], {radius: 10000}).addTo(map);
 		/*if (filterString==null){
 			cir.removeFrom(map);
